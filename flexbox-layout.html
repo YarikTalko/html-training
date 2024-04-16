@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Плаваючий макет</title>
+    <meta charset="utf-8">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            background: #ccc;
+            padding: 20;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        article {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 2px solid #666;
+        }
+
+        section {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Міста</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Київ</a></li>
+                <li><a href="#">Житомир</a></li>
+                <li><a href="#">Хмельницький</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Київ</h1>
+            <p>Ки́їв — столиця та найбільше місто України. Розташований у середній течії Дніпра, у північній
+                Наддніпрянщині. Політичний, соціально-економічний, транспортний, освітньо-науковий, історичний,
+                культурний та духовний центр України.</p>
+            <p>За «Повістю временних літ», Київ заснував полянський князь Кий зі своїми братами Щеком і Хоривом та
+                сестрою Либіддю. Згідно з археологічними даними та писемними джерелами, початок безперервного розвитку
+                Києва датується 2-ю половиною V ст. — 1-ю половиною VI ст.; осередком розширення Києва була гора
+                Замкова.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Нижній колонтитул</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML форми</title>
+</head>
+
+<body>
+    <h2>HTML форми</h2>
+
+    <form id="form1">
+        <label for="fname">Ім'я:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <input type="submit">
+    </form>
+
+    <label for="lname">Прізвище:</label><br>
+    <input type="text" id="lname" name="lname" form="form1"><br>
+
+    <hr>
+
+    <form>
+        <label for="fname">Ім'я:</label><br>
+        <input type="text" id="fname" name="fname" autocomplete="on"><br>
+        <label for="lname">Прізвище:</label><br>
+        <input type="text" id="lname" name="lname" autocomplete="off"><br>
+        <label for="files">Обрати файли:</label><br>
+    </form>
+
+    <br>
+
+    <form>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer"></option>
+            <option value="Firefox"></option>
+            <option value="Chrome"></option>
+            <option value="Safari"></option>
+        </datalist>
+    </form>
+
+    <br>
+
+    <form>
+        <label for="fname">Ім'я:</label><br>
+        <input type="text" name="fname" id="fname"><br>
+        <label for="lname">Прізвище:</label><br>
+        <input type="text" name="lname" id="lname" autofocus><br>
+        <input type="image" src="kyiv.jpeg" alt="Київ" width="96" height="96">
+    </form>
+
+    <br>
+
+    <form>
+        <label for="points">Точки:</label>
+        <input type="number" name="points" id="points" step="3">
+    </form>
+
+    <br>
+
+    <form action="">
+        <label for="username">Ім'я користувача:</label>
+        <input type="text" id="username" name="username" required>
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <form>
+        <label for="phone">Введіть номер телефону:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+    </form>
+
+    <br>
+
+    <form>
+        <label for="country_code">Код країни:</label>
+        <input type="text" name="country_code" id="country_code" pattern="[А-Яа-я]{3}"
+            title="Код країни складається з трьох букв">
+    </form>
+
+    <br>
+
+    <form>
+        <label for="fname">Ім'я:</label><br>
+        <input type="text" id="fname" name="fname" value="Ярослав" size="50" maxlength="10"><br>
+        <label for="lname">Прізвище:</label><br>
+        <input type="text" id="lname" name="lname" value="Талько"><br>
+        <label for="files">Обрати файли:</label><br>
+        <input type="file" name="files" id="files" multiple>
+        <input type="submit">
+    </form>
+
+    <hr>
+
+    <form>
+        <label for="week">Оберіть тиждень:</label>
+        <input type="week" id="week" name="week">
+    </form>
+
+    <form>
+        <label for="homepage">Додайте свою сторінку:</label>
+        <input type="url" id="homepage" name="homepage">
+    </form>
+
+    <form>
+        <label for="appt">Визначте час:</label>
+        <input type="time" id="appt" name="appt">
+    </form>
+
+    <form>
+        <label for="phone">Введіть свій номер телефону:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+    </form>
+
+    <!--  -->
+    <form action="localhost/">
+        <label for="fname">Ім'я:</label>
+        <input type="text" id="fname3" name="fname2">
+        <button value="Надіслати"></button>
+    </form>
+    <!--  -->
+
+    <form>
+        <label for="gsearch">Пошук Ґуґл:</label>
+        <input type="search" id="gsearch" name="gsearch">
+    </form>
+
+    <form>
+        <label for="vol">Гучність (між 0 та 100):</label>
+        <input type="range" id="vol" name="vol" min="0" max="100" step="10">
+    </form>
+
+    <form>
+        <label for="quantity">Кількість:</label>
+        <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="20">
+    </form>
+
+    <form>
+        <label for="quantity">Кількість (між 1 та 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+    </form>
+
+    <form>
+        <label for="bdaymonth">День народження (місяць та рік):</label>
+        <input type="month" id="bdaymonth" name="bdaymonth">
+    </form>
+
+    <form>
+        <label for="fname">Ім'я</label>
+        <input type="text" id="fname" name="fname">
+        <input type="hidden" id="custId" name="custId" value="3478">
+        <input type="submit" value="submit">
+    </form>
+
+    <form>
+        <label for="myfile">Оберіть файл:</label>
+        <input type="file" id="myfile" name="myfile">
+    </form>
+
+    <form>
+        <input type="image" src="kyiv.jpeg" alt="Київ" width="48" height="48">
+    </form>
+
+    <form>
+        <label for="email">Введіть свій email:</label>
+        <input type="email" id="email" name="email">
+    </form>
+
+    <form>
+        <label for="birthdaytime">Дата народження (дата та час):</label>
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+    </form>
+
+    <form>
+        <label for="datemax">Оберіть дату ранішу за 1980-01-01:</label>
+        <input type="date" id="datemax" name="datemax" max="1979-12-31">
+        <label for="datemin">Оберіть дату після 2000-01-01:</label>
+        <input type="date" id="datemin" name="datemin" min="2000-01-02">
+    </form>
+
+    <form>
+        <label for="birthday">День народження:</label>
+        <input type="date" id="birthday" name="birthday">
+    </form>
+
+    <form>
+        <label for="favcolor">Оберіть ваш улюблений колір:</label>
+        <input type="color" id="favcolor" name="favcolor">
+    </form>
+
+    <form>
+        <label for="fname">Ім'я</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Прізвище</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+
+    <form>
+        <label for="username">Ім'я користувача:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="pwd">Пароль:</label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+    </form>
+
+    <hr>
+
+    <form action="action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50">
+        100 +
+        <input type="number" id="b" name="b" value="50">
+        =
+        <output name="x" for="a b"></output>
+        <br><br>
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <form action="action_page.php">
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer"></option>
+            <option value="Google Chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Safari"></option>
+        </datalist>
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Персональні дані:</legend>
+            <label for="fname">Ім'я:</label>
+            <input type="text" id="fname" name="fname" value="Ярослав"><br>
+            <label for="lname">Прізвище:</label>
+            <input type="text" id="lname" name="lname" value="Талько"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <br>
+
+    <button type="button" onclick="alert('Привіт, світе!')">Натисни на мене</button>
+
+    <br>
+
+    <form>
+        <textarea name="message" style="width: 200px; height: 600px;">Кіт грався в саду.</textarea>
+    </form>
+
+    <form>
+        <label for="cars">Оберіть машину:</label>
+        <select id="cars" name="cars" size="4" multiple>
+            <option value="volvo">Вольво</option>
+            <option value="fiat" selected>Фіат</option>
+            <option value="audi">Ауді</option>
+            <option value="mersedez">Мерседез</option>
+        </select>
+    </form>
+
+    <hr>
+
+    <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">У мене є мотоцикл</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2">У мене є авто</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">У мене є човен</label><br>
+    </form>
+
+    <hr>
+
+    <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+    </form>
+
+    <hr>
+
+    <form action="/action_page.php">
+        <label for="fname">Ім'я:</label><br>
+        <input type="text" id="fname" name="fname" value="Ярослав"><br>
+        <label for="lname">Прізвище:</label><br>
+        <input type="text" id="lname" name="lname" value="Талько"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

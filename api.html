@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API HTML</title>
+
+    <style>
+        #div1,
+        #div2 {
+            float: left;
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+    <script>
+        function clickCounter() {
+            if (typeof (Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                }
+                else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result1").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s).";
+            }
+            else {
+                document.getElementById("result1").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <p>Лічильник: <output id="result2"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+
+    <script>
+        var w;
+
+        function startWorker() {
+            if (typeof (Worker) !== "undefined") {
+                if (typeof (w) == "undefined") {
+                    w = new Worker("demo_workers.js");
+                }
+                w.onmessage = function (event) {
+                    document.getElementById("result").innerHTML = event.data;
+                };
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+            }
+        }
+
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+
+    <hr>
+
+    <p><button onclick="clickCounter()" type="button">Клікни!</button></p>
+    <div id="result1"></div>
+
+    <br>
+
+    <hr>
+
+    <div id="result"></div>
+
+    <script>
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("lastname", "Smith");
+        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+    }
+    else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+    </script>
+
+    <hr>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="drag1" src="kyiv.jpeg" draggable="true" ondragstart="drag(event)" width="300" height="200">
+    </div>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <hr>
+
+    <button onclick="getLocation()">Широта та довгота</button>
+
+    <p id="demo"></p>
+
+    <script>
+            var x = document.getElementById("demo");
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.watchPosition(showPosition, showError);
+                }
+                else {
+                    x.innerHTML = "Ґеолокація не підтримується цим бравзером."
+                }
+            }
+
+            function showPosition(position) {
+                x.innerHTML = "Широта: " + position.coords.latitude + "<br>Довгота: " + position.coords.longitude;
+            }
+
+            function showError() {
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        x.innerHTML = "User denied the request for Geolocation."
+                        break;
+                    case error.POSITION_UNVAILIABLE:
+                        x.innerHTML = "Location information is unavailable."
+                        break;
+                    case error.TIMEOU:
+                        x.innerHTML = "The request to get user location timed out."
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        x.innerHTML = "An unknown error occurred."
+                        break;
+                }
+            }
+    </script>
+</body>
+
+</html>

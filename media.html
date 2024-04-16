@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media HTML</title>
+</head>
+
+<body>
+
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/SpZF41r7pgY?controls=0"></iframe>
+
+    <hr>
+
+    <embed width="100%" height="500px" src="1 сторінка.html">
+
+    <embed src="girl.jpg">
+
+    <object data="girl.jpg"></object>
+
+    <object width="100%" height="500px" data="1 сторінка.html"></object>
+
+    <hr>
+
+    <audio controls autoplay>
+        <source src="sounds/horse.ogg" type="audio/ogg">
+        Ваш браузер не пітримує аудіо HTML.
+    </audio>
+
+    <hr>
+
+    <div style="text-align: center;">
+        <button onclick="PlayPause()">Відтворити/Павза</button>
+        <button onclick="MakeBig()">Великий</button>
+        <button onclick="MakeNormal()">Нормальний</button>
+        <button onclick="MakeSmall()">Малий</button>
+        <br>
+        <video id="video1" width="420">
+            <source src="videos/mov_bbb.mp4" type="video/mp4">
+            Ваш браузер не пітримує відео HTML.
+        </video>
+    </div>
+
+    <script>
+        var myVideo = document.getElementById("video1");
+
+        function PlayPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+
+        function MakeBig() {
+            myVideo.width = 520;
+        }
+
+        function MakeNormal() {
+            myVideo.width = 420;
+        }
+
+        function MakeSmall() {
+            myVideo.width = 320;
+        }
+    </script>
+
+    <!-- <video width="400" controls>
+        <source src="videos/mov_bbb.mp4" type="video/mp4">
+        Ваш браузер не пітримує відео HTML.
+    </video> -->
+</body>
+
+</html>

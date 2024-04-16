@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Плаваючий макет</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        } */
+
+        .left {
+            background-color: lightblue;
+            padding: 20px;
+            float: left;
+            width: 20%;
+        }
+
+        .main {
+            background-color: gray;
+            padding: 20px;
+            float: left;
+            width: 60%;
+        }
+
+        .right {
+            background-color: green;
+            padding: 20px;
+            float: left;
+            width: 20%;
+        }
+
+        @media screen and (max-width: 800px) {
+            .left, .main, .right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <h2>Міста</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Київ</a></li>
+                <li><a href="#">Житомир</a></li>
+                <li><a href="#">Хмельницький</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Київ</h1>
+            <p>Ки́їв — столиця та найбільше місто України. Розташований у середній течії Дніпра, у північній
+                Наддніпрянщині. Політичний, соціально-економічний, транспортний, освітньо-науковий, історичний,
+                культурний та духовний центр України.</p>
+            <p>За «Повістю временних літ», Київ заснував полянський князь Кий зі своїми братами Щеком і Хоривом та
+                сестрою Либіддю. Згідно з археологічними даними та писемними джерелами, початок безперервного розвитку
+                Києва датується 2-ю половиною V ст. — 1-ю половиною VI ст.; осередком розширення Києва була гора
+                Замкова.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Нижній колонтитул</p>
+    </footer>
+
+    <img src="homer.gif" alt="homer.gif" style="max-width: 100%; height: auto;">
+
+    <picture>
+        <source srcset="kyiv.jpeg" media="(max-width: 600px)">
+        <source srcset="girl.jpg" media="(max-width: 1500px)">
+        <img src="desktop.jpg" style="width: auto;">
+    </picture>
+
+    <h1 style="font-size: 10vw;">Привіт, світе!</h1> -->
+
+    <div class="left">
+        <p>Ліве меню</p>
+    </div>
+
+    <div class="main">
+        <p>Головне меню</p>
+    </div>
+
+    <div class="right">
+        <p>Праве меню</p>
+    </div>
+</body>
+
+</html>

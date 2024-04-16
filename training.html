@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <title>Сторінка для навчання HTML</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewpot" content="width=device-width, initial-scale=1.0">
+    <!-- <style> -->
+    <!-- body {background-color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+        h1 {color: aqua; font-size: large;}
+        p {
+            color: brown; 
+            font-size: medium;  
+            border: 2px solid powderblue;
+            padding: 100px;
+            margin: 50px;
+        } -->
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css"> -->
+    <!-- </style> -->
+    <style>
+        /* img {
+            width: 300px;
+            height: 200px;
+        } */
+
+        table {
+            border-spacing: 30px;
+        }
+
+        /* table, */
+        /* <!-- th,
+        td { */
+        /* border: 2px solid black;
+            border-collapse: collapse; */
+        /* border-radius: 10px; */
+        /* border-style: solid;
+            border-color: #96D4D4;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            padding-left: 10px;
+            padding-right: 5px;
+        } */
+
+        th {
+            text-align: center;
+        }
+
+        /* td:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+        } */
+
+        /* tr:nth-child(even),  td:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+        } */
+
+        table {
+            border-collapse: collapse;
+        }
+
+        tr {
+            border-bottom: 1px solid #000000;
+        }
+
+        tr:hover {
+            background-color: #d6eeee;
+        }
+
+        /* th,
+        td {
+            background-color: #96D4D4;
+        } */
+
+        /* body
+        {
+            background-image: url('girl.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        } */
+
+        /* a:link, a:visited
+        {
+            background-color: green;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:active
+        {
+            background-color: red;
+        } */
+        /* ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111111;
+        } */
+        .city {
+            background-color: tomato;
+            color: white;
+            /* border: 2px solid black; */
+            /* margin: 20px; */
+            padding: 10px;
+        }
+
+        .note {
+            font-size: 120%;
+            color: red;
+        }
+
+        .main {
+            text-align: center;
+        }
+
+        #demo {
+            color: blue;
+        }
+
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <img src="tree.jpg" height="200" width="300">
+    <img src="images/tree2.jpg" height="200" width="300">
+    <img src="images/images/tree3.jpg" height="200" width="300">
+    <img src="https://www.w3schools.com/images/picture.jpg">
+    <hr>
+    <script>
+        function Light(isLight) {
+            var pic;
+            if (isLight == true) {
+                pic = "lamp_on.png";
+            }
+            else {
+                pic = "lamp_off.png";
+            }
+            document.getElementById("lampImage").src = pic;
+        }
+    </script>
+
+    <noscript>Перепрошую, ваш браузер не підтримує скрипти.</noscript>
+
+    <img id="lampImage" src="lamp_off.png" alt="lamp" width="200" height="400">
+    <br>
+    <p><button type="button" onclick="Light(true)">Увімкнути світло</button>
+        <button type="button" onclick="Light(false)">Вимкнути світло</button>
+    </p>
+    <button type="button" onclick="clickButtonFunction()">Змінити назву кнопки</button>
+    <p id="demo">Демонстраційний текст</p>
+    <p id="demo">Демонстраційний текст 2</p>
+    <script>
+        function clickButtonFunction() {
+            document.getElementById("demo").innerHTML = "Привіт, ДжаваСкрипт!";
+            document.getElementById("demo").style.fontSize = "20px";
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.backgroundColor = "blue";
+        }
+    </script>
+    <hr>
+    <iframe src="1 сторінка.html" title="Iframe" name="framee" style="border: 2px solid black;" width="500"
+        height="500"></iframe>
+    <p><a href="2 сторінка.html" target="framee">w3schools</a></p>
+    <button onclick="displayResult()">Змінити текст</button>
+    <script>
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Гарного дня!";
+        }
+    </script>
+    <a href="#list1">Стрибнути до першого списку</a>
+    <h1 id="myHeader">Мій заголовок</h1>
+    <br>
+    <button onclick="mySecondFunction()">Приховати елементи</button>
+    <p>Мій <span class="note">важливий</span> заголовок</p>
+    <p>Це дуже <span class="note">важливий</span> текст</p>
+    <!-- <div class="city"> -->
+    <h2 class="city main">Лондон</h2>
+    <p>Лондон - столиця ВБ.</p>
+    <!-- </div>
+    <div class="city"> -->
+    <h2 class="city">Київ</h2>
+    <p>Київ - столиця України.</p>
+    <!-- </div>
+    <div class="city"> -->
+    <h2 class="city">Токіо</h2>
+    <p class="city">Токіо - столиця Японії.</p>
+    <!-- </div> -->
+    <script>
+        function mySecondFunction() {
+            var x = document.getElementsByClassName("city");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+    </script>
+    <br>
+    <div style="border: 1px solid #ff6347;">Привіт, світе!</div>
+    <p>Привіт, <span style="border: 1px solid red;">мій любий</span> світе</p>
+    <div style="background-color: #000000; color: white; padding: 20px;">Київ - столиця України.</div>
+    <p>У моєї матері <span style="color: brown; font-weight: bold;">коричневі</span> очі та <span
+            style="color: antiquewhite; font-weight: bold;">бліда</span> шкіра</p>
+    </p>
+    <br>
+    <h2 id="list1">Перший список</h2>
+    <ol type="i" start="35">
+        <li>Кава</li>
+        <li>Чай
+            <ol type="i" start="57">
+                <li>Чорний чай</li>
+                <li>Зелений чай</li>
+            </ol>
+        </li>
+        <li>Молоко</li>
+    </ol>
+    <!-- <ul>
+        <li><a href="#home">Головна сторінка</a></li>
+        <li><a href="#news">Новини</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+        <li><a href="#about">Про нас</a></li>
+    </ul> -->
+    <dl>
+        <dt>Кава</dt>
+        <dd>чорний гарячий напій</dd>
+        <dt>Молоко</dt>
+        <dd>білий теплий напій</dd>
+    </dl>
+    <!-- <ol>
+        <li>Андрій</li>
+        <li>Богдан</li>
+        <li>Юрій</li>
+        <li>Ярослав</li>
+    </ol> -->
+    <!-- <ul style="list-style-type: square;">
+        <li>Кава</li>
+        <li>Чай</li>
+        <ul>
+            <li>Чорний чай</li>
+            <li>Зелений чай</li>
+        </ul>
+        <li>Молоко</li>
+    </ul> -->
+    <br>
+    <table style="width: 100%;">
+        <caption>Асасини</caption>
+        <colgroup>
+            <col span="1">
+            <col span="1" style="background:hsla(9, 100%, 64%, 0.5)">
+        </colgroup>
+        <tr>
+            <th>Ім'я</th>
+            <th>Країна</th>
+            <th>Гра</th>
+        </tr>
+        <tr style="height: 200px;">
+            <td>Альтаїр ібн Ла-Агад</td>
+            <td>Сирія</td>
+            <td>Assassin`s Creed I</td>
+        </tr>
+        <tr>
+            <td>Е́ціо Авдіто́ре да Фіре́нце</td>
+            <td>Італія</td>
+            <td>Assassin`s Creed II, Brotherhood, Revelations</td>
+        </tr>
+        <tr>
+            <td>Конор Кенвей</td>
+            <td>Америка</td>
+            <td>Assassin`s Creed III</td>
+        </tr>
+    </table>
+    <br>
+    <picture>
+        <source media="(min-height: 650px)" srcset="tree.jpg">
+        <source media="(min-height: 450px)" srcset="kyiv.jpeg">
+        <img src="girl.jpg">
+    </picture>
+    <!-- <p style="background-image: url('girl.jpg');">Тестування фонового зображення</p> -->
+    <br>
+    <img src="desktop.jpg" alt="Робочий стіл" usemap="#workmap">
+    <map name="workmap">
+        <area shape="rect" coords="148,13,201,69" alt="Notebook" href="https://en.wikipedia.org/wiki/Computer">
+        <area shape="circle" coords="219,103,15" alt="cup" href="https://en.wikipedia.org/wiki/Cup">
+        <area shape="poly" coords="86,44,112,45,107,58,76,53,77,58" alt="book" href="https://en.wikipedia.org/wiki/Book"
+            onclick="myFunction()">
+    </map>
+    <script>
+        function myFunction() {
+            alert("Ви клацнули на книжку");
+        }
+    </script>
+    <br>
+    <img src="tree.jpg" alt="beautiful tree">
+    <img src="girl.jpg" alt="girl with camera">
+    <img src="kyiv.jpeg" alt="capital of Ukraine">
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="image from w3schools">
+    <br>
+    <a href="https://kinobaza.com.ua/titles/the-simpsons">
+        <img src="homer.gif" alt="simpsons meme" style="float:left">
+    </a>
+    <hr>
+    <h2 id="C4">Chapter 4</h2>
+    <a href="#C4">Стрибнути до глави №4</a>
+    <br>
+    <a href="https://www.w3schools.com/html/html_images.asp">Нове посилання</a>
+    <br>
+    <a href="https://www.instagram.com/yar1ktalko/" target="_self">Мій інстаґрам на цій же вкладці</a>
+    <br>
+    <a href="https://www.instagram.com/yar1ktalko/" target="_blank">Мій інстаґрам в новій вкладці</a>
+    <br>
+    <a href="https://www.instagram.com/yar1ktalko/" target="_parent">Мій інстаґрам в батьківській вкладці</a>
+    <br>
+    <a href="https://www.instagram.com/yar1ktalko/" target="_top">Мій інстаґрам в новому вікні</a>
+    <br>
+    <a href="2 сторінка.html">2 сторінка</a>
+    <br>
+    <a href="https://kinobaza.com.ua/"><img src="back.png" alt="html tutorial" style="width:42px; height:42px;"></a>
+    <br>
+    <a href="mailto:ariktalko@gmail.com">Надіслати листа</a>
+    <br>
+    <button onclick="document.location=''">HTML посібник</button>
+    <br>
+    <a href="https://www.google.com/?hl=uk" title="сайт ґуґла">Відвідайте наш посібник по HTML</a>
+    <br>
+    <a href="https://www.w3schools.com/html/default.asp" title="сайт НЕ ґуґла">Відвідайте наш посібник по HTML</a>
+    <br>
+    <a href="/html/default.asp">посібник</a>
+    <hr>
+    <h1 style="color: darkorchid;">Заголовок</h1>
+    <p style="color:chocolate">Абзац</p>
+    <hr>
+    <h1 style="background-color:rgb(255, 99, 71);">Тей самий текст - RGB</h1>
+    <h1 style="background-color:#ff6347;">Тей самий текст - HEX</h1>
+    <h1 style="background-color:hsl(9, 100%, 64%);">Тей самий текст - HSL</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 0.5);">Тей самий текст, тільки прозоріший - RGBA</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">Тей самий текст, тільки прозоріший - HSLA</h1>
+    <br>
+    <!-- Це коментар -->
+    <p style="background-color: hotpink;">Цитата із сайту Євгена Клопотенка:</p>
+    <blockquote style="color:lawngreen"
+        cite="https://klopotenko.com/gorihova-nizhnist-use-pro-mygdalne-moloko-vid-korysti-do-metodu-prygotuvannya/">
+        Альтернативне молоко поступово стає не просто трендом, але повноцінним мешканцем магазинних полиць, меню
+        кав’ярень
+        і помешкань усіх тих, хто шукає нові смаки чи відмовляється від лактози. Мигдалеве молоко користується неабиякою
+        популярністю,
+        і, здавалося б, це чудово, <!-- адже горіхи вважаються корисними.--> Воно справді може запропонувати кілька
+        переваг для
+        <!-- здоров’я,
+        але водночас, як і решта горіхів, воно може викликати алергії чи мати забагато доданого цукру, як у більшості
+        оброблених -->
+        напоїв. Тому з цим продуктом варто розібратися: кому варто пити, кому не варто, і як його зробити вдома, якщо
+        <!-- хочеться, -->
+        приміром, кави з горіховим посмаком.
+    </blockquote>
+    <!-- Це також коментар -->
+    <p>Також Євген доповнює: <q>Порівняно з коров’ячим і рештою рослинного молока, мигдалеве дуже низькокалорійне й
+            містить
+            всього 40 калорій на порцію в 250 мл.</q></p>
+    <p><abbr title="Всесвітня Організація Охорони Здоров'я">ВООЗ</abbr> була заснована у 1948 році.</p>
+    <address>
+        Цей документ написаний Ярославом Тальком.<br>
+        Відвідати мене можна за адресою:<br>
+        Приклад.com<br>
+        10001, Житомир<br>
+        Україна
+    </address>
+    <p><cite>Крик</cite> Едварда Мунка намальований у 1893 році.</p>
+    <bdo dir="rtl">Цей текст написаний зправа на ліво.</bdo>
+    <hr>
+    <p><b>Текст із широкою кісткою</b></p>
+    <p><strong>Важливий текст</strong></p>
+    <p><i>Курсивний текст</i></p>
+    <p><em>виділений текст</em></p>
+    <p><small>Маленький текстик</small></p>
+    <p>Текст із <mark>позначеним</mark> словом</p>
+    <p>Я люблю <del>чолові</del> жінок</p>
+    <p>Я люблю <del>чолові</del> <ins>жінок</ins></p>
+    <p>В цьому текстня частина формули: h<sub>1</sub>=...</p>
+    <p>В цьому тексті є число у квадраті: 2<sup>9</sup></p>
+    <hr>
+    <h1 style="font-size:60px; text-align: center; border: 2px solid tomato;">Заголовок №1</h1>
+    <h2 style="color:powderblue;">Заголовок №2</h2>
+    <h3 style="font-family:verdana;">Заголовок №3</h3>
+    <h4 style="font-size: 220%;">Заголовок №4</h4>
+    <h5 style="color:yellow; font-family:verdana;">Заголовок №5</h5>
+    <h6 style="background-color: blueviolet;">Заголовок №6</h6>
+    <p style="color: greenyellow;">Цей абзац - червоний!</p>
+    <p title="А я - підказочка">Я - просто текст</p>
+    <hr>
+    <img src="https://www.w3schools.com/images/img_girl.jpg" alt="Girl with a jacket" width="250" height="300">
+    <hr>
+    <a href="https://www.instagram.com/yar1ktalko/">Мій інстаґрам</a>
+    <hr>
+    <p>Цей параграф<br>має лайнбрейки</p>
+    <hr>
+    <pre>
+    Я люблю цю країну
+    Навіть без кокаїну
+    Небо це березневе
+    Без тебе, серце, без тебе
+    </pre>
+</body>
+
+</html>
